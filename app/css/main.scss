@@ -1,0 +1,89 @@
+// --------------------------------
+// - MAIN
+// --------------------------------
+// File where you should import all your SASS files / modules
+
+// You can comment out stuff to include / exclude code
+
+// /!\ WARNING: DELETE EVERYTHING BELOW TO DO A FRESH START
+
+@import "layout/layout";
+@import "variables";
+
+@import "components/fonts";
+
+
+// Styling example - why not?
+body {
+  background: $bg-color;
+  color: $font-color;
+  font-family: $body-font;
+}
+
+// Magnificent dog image styling
+img {
+  max-width: 650px;
+  width: 100%;
+}
+
+// Awesome navigation bar
+nav {
+  height: 60px;
+  line-height: 60px;
+  box-shadow: 0 0 1px rgba(0,0,0,0.15);
+}
+
+// There's a link on the page? Let it be red!
+a {
+  color: $link-color;
+  text-decoration: none;
+}
+pre{
+  margin-top: 0;
+  font-family: $header-font;
+}
+
+nav, footer.page-footer{
+  background-color: $nav-color;
+  .brand-logo{
+    left: 1%;
+  }
+}
+
+.controls{
+  width:300px;
+  background-color: white;
+  color: black;
+  padding:7px;
+}
+
+canvas#scene{
+  background-color: black;
+  width: 100%;
+  max-width: 1000px;
+  height: 500px;
+  display: block;
+  margin: 30px auto;
+}
+.code{
+  padding: 5px;
+  font-size: 100%;
+  color: #3f9245;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+a.inline{
+  border-bottom: 1px solid;
+  @include vendor-transition();
+  &:hover{
+    @include vendor-transition();
+    border-top: 1px solid;
+    border-bottom:none;
+  }
+}
+sub{
+  bottom: -0.05em;
+  font-size: 50%;
+}

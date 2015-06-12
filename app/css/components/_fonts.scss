@@ -1,0 +1,42 @@
+// --------------------------------
+// - FONTS
+// --------------------------------
+// Example of a component SASS file
+
+// Random header size
+h1 {
+  font-size: 60px;
+}
+
+// Random sub-header size
+h2 {
+  font-size: 40px;
+  color: lighten($font-color, 25%);
+}
+
+// Random class to center text
+.text-center {
+  text-align: center;
+}
+
+// Resize on mobile
+@media (max-width: 767px){
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+}
+
+p{
+  font-size: 1.3em;
+}
+
+@for $i from 1 through 6{
+  h#{$i}{
+    font-family: $header-font;
+    text-align: center;
+  }
+}

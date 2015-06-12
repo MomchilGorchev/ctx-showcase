@@ -1,0 +1,2 @@
+# your already compiled libraries
+app/js/lib/**/*.js
