@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function(){
 
 
-
+    'use strict';
     window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
     window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function(){
                     onComplete: function() {
                         moveAround(dot);
                     }
-                })
+                });
             }
         });
     }

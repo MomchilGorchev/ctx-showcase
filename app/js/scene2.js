@@ -1,16 +1,11 @@
 /**
  * Created by momchillgorchev on 12/06/15.
  */
-/**
- * Created by momchillgorchev on 03/06/15.
- */
+'use strict';
 
 // Save some stuff for efficiency
 window.requestAnimationFrame =
-    window.requestAnimationFrame
-    || window.mozRequestAnimationFrame
-    || window.webkitRequestAnimationFrame
-    || window.msRequestAnimationFrame;
+    window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 
 var scene = document.getElementById('scene'),
     ctx = scene.getContext('2d'),
@@ -57,7 +52,7 @@ function CanvasScene(sides, animationSpeed, polygons){
             ctx.beginPath();
             ctx.strokeStyle = 'rgba('+ _this.color +', '+ _this.alpha + ')';
             ctx.lineWidth = 5;
-            if (_this.sides < 3) return;
+            if (_this.sides < 3) { return; }
             var a = (Math.PI * 2)/_this.sides;
             a = _this.anticlockwise?-a:a;
             ctx.save();
@@ -135,9 +130,9 @@ function CanvasScene(sides, animationSpeed, polygons){
                             constructor.animateShape(s);
                         }, delay * 1000);
                     }
-                })
+                });
             }
-        })
+        });
     };
 
     // init everything
