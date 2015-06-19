@@ -53,8 +53,9 @@
                 <blockquote><p><a href="https://github.com/MomchilGorchev/canvas-fun" class="inline"><i class="fa fa-download"></i> Download source</a></blockquote>
                 <blockquote><p>Highlights</blockquote>
                 <p>
-                    The source code for this example can be found on GitHub.
-                    It is using TweenMax's <em>SlowMo</em> easing (more info <a class="inline" href="https://greensock.com/ease-visualizer" >here</a>) and the following function to generate random array indexes:
+                    The source code for this example can be found on GitHub.<br />
+
+                    This example is using TweenMax's <em>SlowMo</em> easing (more info <a class="inline" href="https://greensock.com/ease-visualizer" >here</a>) and the commonly used function to generate random array indexes:
                 </p>
                 <pre class="code">
                     function randomNumber(min, max) {
@@ -62,7 +63,8 @@
                     }
                 </pre>
                 <p>
-                    The animation duration is based on the circle's radius value. Smaller circles gets faster animation. The entire animation function is looking like that:
+                    The the duration of the animation of each object is based on the it's <em>radius</em> value. Smaller circles gets faster animation. Every shape/circle (however you want to call it :)) is initially being draw on a random canvas position.
+                    Then the <em>x</em> and <em>y</em> are being changed to another random value and the object is moved to its new position.
                 </p>
                 <pre class="code">
                     function moveAround(dot){

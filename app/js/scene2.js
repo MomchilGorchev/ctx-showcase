@@ -141,7 +141,7 @@ function CanvasScene(sides, animationSpeed, polygons, noAlpha){
 }
 
 // Start everything :)
-var Scene = new CanvasScene(10, 5, 20);
+var Scene = new CanvasScene(10, 5, 10);
 
 //ctx.font="50px Verdana";
 //// Create gradient

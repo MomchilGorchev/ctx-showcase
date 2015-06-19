@@ -49,6 +49,12 @@ nav, footer.page-footer{
     left: 1%;
   }
 }
+p{
+  font-weight:300;
+}
+em{
+  color: darken($font-color, 12%);
+}
 
 .controls{
   width:50%;

@@ -87,8 +87,8 @@ document.addEventListener('DOMContentLoaded', function(){
             ease: SlowMo.ease.config(0.3, 0.4, false),
             onComplete: function() {
                 TweenMax.to(dot, timing, {
-                    x: pos.x,
-                    y: pos.y,
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
                     ease: SlowMo.ease.config(0.3, 0.4, false),
                     onComplete: function() {
                         moveAround(dot);
