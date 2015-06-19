@@ -24,7 +24,7 @@
 <!-- Example navigation bar -->
 <nav>
     <div class="nav-wrapper">
-        <a href="#!" class="brand-logo"><pre> < CANVAS > <sub>experimental</sub></pre></a>
+        <a href="#!" class="brand-logo"><pre> < CANVAS /> <sub>experimental</sub></pre></a>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
         <ul class="right hide-on-med-and-down">
             <li><a href="index.html">Example 1</a></li>
@@ -62,6 +62,16 @@
                 <label for="speedController">Animation speed <span id="speedPrievew">5</span> s</label>
                 <input type="range" min="0.5" max="10" step="0.5" id="speedController" value="5" oninput="updatePreview(value, id)">
             </div>
+            <div class="switch">
+                <label>Dynamic opacity - bigger radius = lower opacity</label><br />
+                <label>
+                    OFF
+                    <input type="checkbox" id="opacitySwitch" value="off" onchange="setSwitchValue(id, value)"/>
+                    <span class="lever"></span>
+                    ON
+                </label>
+            </div>
+            <br />
             <input type="submit" value="Reload" class="btn btn-success" id="reloadAnimation" />
         </div>
         <section class="info">
@@ -71,7 +81,8 @@
             <p>
 
                 The source code for this example can be found on GitHub.<br />
-                This is my first time playing with polygons on canvas. Once I've figured out how to create regular polygons it was easy to play with their radius, color and alpha values.
+                This is my first time playing with polygons on canvas. Once I've figured out how to create regular polygons it was easy to play with their radius, color and alpha values. Im using Object-Oriented approach so its easy to change object properties and reload the
+                animation when the controls are used.
                 The most interesting parts of this example are the Polygon constructor function and the createShapes method:
                 <br />
             </p>
@@ -163,13 +174,22 @@
         _this.parentNode.querySelector('span').innerHTML = value;
     }
 
+    function setSwitchValue(id, value){
+        var _this = document.querySelector('#'+ id);
+        var newValue = value === 'on' ? 'off' : 'on';
+        _this.setAttribute('value', newValue);
+    }
+
     document.getElementById('reloadAnimation').addEventListener('click', function(e){
 
         var newSidesValue = document.getElementById('sidesController').value;
         var newAnimationSpeed = document.getElementById('speedController').value;
         var polygonAmount = +document.getElementById('polygonsController').value;
+        var opacity = document.getElementById('opacitySwitch').value === 'on' ? true : false;
 
-        Scene = new CanvasScene(newSidesValue, newAnimationSpeed, polygonAmount);
+
+        console.log(opacity);
+        Scene = new CanvasScene(newSidesValue, newAnimationSpeed, polygonAmount, opacity);
 
     });
 </script>

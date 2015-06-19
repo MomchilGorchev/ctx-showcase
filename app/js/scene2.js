@@ -17,12 +17,13 @@ var scene = document.getElementById('scene'),
 scene.style.backgroundColor = 'black';
 
 // Constructor function
-function CanvasScene(sides, animationSpeed, polygons){
+function CanvasScene(sides, animationSpeed, polygons, noAlpha){
     // Chache the initiator object and check params
     var constructor = this;
     constructor.sides = sides || 6;
     constructor.animationSpeed = animationSpeed || 2;
     constructor.polygons = polygons || 10;
+    constructor.noAlpha = noAlpha;
 
     // Init
     constructor.init = function(){
@@ -45,7 +46,7 @@ function CanvasScene(sides, animationSpeed, polygons){
         _this.startAngle = startAngle;
         _this.anticlockwise = anticlockwise;
         _this.color = color;
-        _this.alpha = 1 - _this.radius * 0.002; //Bigger radius means lower opacity
+        _this.alpha = !alpha ? 1 : 1 - _this.radius * 0.002; //Bigger radius means lower opacity
 
         // Draw the polygon
         _this.draw = function(ctx){
@@ -72,16 +73,17 @@ function CanvasScene(sides, animationSpeed, polygons){
     // Create "n" number of polygons
     constructor.createShapes = function(sides){
         for (var i = 0; i < constructor.polygons; i++){
+            var alpha = constructor.noAlpha;
             var poly = new constructor.Polygon(
                 ctx,                                    // Canvas context
                 WIDTH / 2 ,                             // x value
                 HEIGHT / 2,                             // y value
-                (i+1) * 20,                             // radius
+                (i+1) * 15,                             // radius
                 sides,                                  // sides
                 90,                                     // start angle
                 -Math.PI /2,                            // anticlockwise
                 colors[Math.floor(i%colors.length)],    // random color
-                1                                       // alpha
+                alpha                                   // alpha
             );
             // Save all shapes for later use
             shapes.push(poly);

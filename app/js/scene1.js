@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function(){
     var canvas = document.getElementById('scene');
     var ctx = canvas.getContext('2d');
     var dots = [];
-    var colors = ['242, 56, 90', '245, 165, 3', '74, 217, 217', '54, 177, 191'];
+    var colors = ['131, 18, 178', '255, 181, 25', '180, 0, 255', '20, 204, 120', '7, 178, 100'];
 
     canvas.width = '1000';
     canvas.height = '500';

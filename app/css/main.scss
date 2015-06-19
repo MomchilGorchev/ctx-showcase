@@ -51,7 +51,9 @@ nav, footer.page-footer{
 }
 
 .controls{
-  width:300px;
+  width:50%;
+  min-width: 300px;
+  margin: 10px auto;
   background-color: white;
   color: black;
   padding:7px;
