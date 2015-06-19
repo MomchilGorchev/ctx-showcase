@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Canvas experiments by Momchil Gorchev</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Abel|Ubuntu' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <!-- /Stylesheets -->
+
+    <!-- IE conditionals (Included ones are for HTML5 backwards compatibility)-->
+    <!--[if IE 8]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body id="page-top">
+<!-- Example navigation bar -->
+<nav>
+    <div class="nav-wrapper">
+        <a href="#!" class="brand-logo"><pre> < CANVAS /> <sub>experimental</sub></pre></a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="index.html">Example 1</a></li>
+            <li><a href="index2.html">Example 2</a></li>
+            <li><a href="index3.html">Example 3</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+            <li><a href="index.html">Example 1</a></li>
+            <li><a href="index2.html">Example 2</a></li>
+            <li><a href="index3.html">Example 3</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+
+    <!-- Example header -->
+    <header>
+        <h1>Snowstorm</h1>
+    </header>
+
+    <!-- Example main section with obligatory random meme -->
+    <main>
+        <canvas id="scene"></canvas>
+
+        <section class="info">
+            <blockquote><p><a href="https://github.com/MomchilGorchev/canvas-fun" class="inline"><i class="fa fa-download"></i> Download source</a></blockquote>
+            <blockquote><p>Highlights</blockquote>
+            <p>
+                The source code for this example can be found on GitHub.<br />
+            </p>
+
+
+        </section>
+    </main>
+</div>
+<!-- Example footer -->
+<footer class="page-footer">
+    <div class="footer-copyright">
+        <div class="container">
+            <i class="fa fa-info-circle"></i> Experiments by <a href="http://gorchev.pro">Momchil Gorchev.</a> Use it however you find it useful.
+            <a class="grey-text text-lighten-4 right" href="mailto:momchil.gorchev@gmail.com"><i class="fa fa-envelope"></i> Say Hai</a>
+        </div>
+    </div>
+</footer>
+
+<!-- JS Libraries (example)-->
+<!--<script src="js/lib/lib.js"></script>-->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
+
+<!-- Your local scripts should follow the following pattern to be linted and minified -->
+<!-- build:js /js/main.min.js -->
+<script src="js/main.js"></script>
+<script src="js/scene3.js"></script>
+<!-- endbuild -->
+</body>
+</html>
