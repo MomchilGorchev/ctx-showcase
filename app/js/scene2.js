@@ -73,7 +73,6 @@ function CanvasScene(sides, animationSpeed, polygons, noAlpha){
     // Create "n" number of polygons
     constructor.createShapes = function(sides){
         for (var i = 0; i < constructor.polygons; i++){
-            var alpha = constructor.noAlpha;
             var poly = new constructor.Polygon(
                 ctx,                                    // Canvas context
                 WIDTH / 2 ,                             // x value
@@ -83,7 +82,7 @@ function CanvasScene(sides, animationSpeed, polygons, noAlpha){
                 90,                                     // start angle
                 -Math.PI /2,                            // anticlockwise
                 colors[Math.floor(i%colors.length)],    // random color
-                alpha                                   // alpha
+                constructor.noAlpha                     // alpha
             );
             // Save all shapes for later use
             shapes.push(poly);
