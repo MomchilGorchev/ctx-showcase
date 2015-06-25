@@ -32,7 +32,7 @@ function createDots(amount){
     }
 }
 
-createDots(2000);
+createDots(1000);
 
 function Dot(x, y, radius, color, alpha){
     var _this = this;
