@@ -54,9 +54,42 @@
             <blockquote><p>Highlights</blockquote>
             <p>
                 The source code for this example can be found on GitHub.<br />
+
+                This is quite straightforward particle animation. The most interesting part is the TweenMax animation function which dynamically check for the new generated position of each particle and change the alpha value.
+
             </p>
+            <pre class="code">
+                function animateDot(d){
 
+                    if(d.y <= 0){
+                        d.alpha = Math.random();
+                    }
+                    if(d.x <= 0){
+                        d.alpha = Math.random();
+                    }
+                    var newDy = HEIGHT;
+                    var newXy = Math.random() * WIDTH;
+                    var delay = Math.random() * 5;
 
+                    TweenMax.to(d, 2, {
+                        y: newDy,
+                        x: newXy,
+                        delay: delay,
+                        ease: Power0.easeNone,
+                        onComplete: function(){
+                            if(d.y >= HEIGHT){
+                                d.alpha = 0;
+                                d.y = -10;
+                            }
+                            if(d.x >= WIDTH){
+                                d.alpha = 0;
+                                d.x = -10;
+                            }
+                            animateDot(d);
+                        }
+                    });
+                }
+            </pre>
         </section>
     </main>
 </div>

@@ -74,19 +74,13 @@ function animateDot(d){
     var newDy = HEIGHT;
     var newXy = Math.random() * WIDTH;
     var delay = Math.random() * 5;
-    //(d.dy + Math.random() * 5) > HEIGHT ? 0 : d.dy + Math.random() * 5;
-
-    //newDy > HEIGHT ?
-    //console.log(newDy);
 
     TweenMax.to(d, 2, {
         y: newDy,
-        x:  + newXy,
+        x: newXy,
         delay: delay,
         ease: Power0.easeNone,
         onComplete: function(){
-            d.dy = d.y = newDy;
-            d.xy = d.x = newXy;
             if(d.y >= HEIGHT){
                 d.alpha = 0;
                 d.y = -10;
