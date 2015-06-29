@@ -20,6 +20,7 @@ scene.style.backgroundColor = 'black';
 
 
 function createDots(amount){
+    'use strict';
     for (var i = 0; i < amount; i++){
         var x = Math.random() * WIDTH,
             y = -10,
@@ -35,6 +36,7 @@ function createDots(amount){
 createDots(1000);
 
 function Dot(x, y, radius, color, alpha){
+    'use strict';
     var _this = this;
 
     _this.x = x || Math.random() * WIDTH;
@@ -51,10 +53,12 @@ function Dot(x, y, radius, color, alpha){
         ctx.closePath();
         ctx.fillStyle = 'rgba('+ _this.color +', '+ _this.alpha +')';
         ctx.fill();
-    }
+    };
 }
 
 function reDraw() {
+    'use strict';
+
     ctx.clearRect(0, 0, WIDTH, HEIGHT);
     for (var j = 0; j < dots.length; j++) {
         dots[j].draw(ctx);
@@ -64,7 +68,7 @@ function reDraw() {
 reDraw();
 
 function animateDot(d){
-
+    'use strict';
     if(d.y <= 0){
         d.alpha = Math.random();
     }

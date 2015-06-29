@@ -10,9 +10,9 @@
     "indent": 2,
     "newcap": true,
     "noarg": true,
+    "undef": false,
+    "laxbreak": true,
     "quotmark": "single",
-    "undef": true,
-    "unused": "vars",
     "strict": true,
     "globals": {
         "$": false,
