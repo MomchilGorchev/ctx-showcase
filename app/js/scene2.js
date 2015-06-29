@@ -2,7 +2,7 @@
  * Created by momchillgorchev on 12/06/15.
  */
 
-document.addEventListener('DomContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', function(){
 
 
     'use strict';
