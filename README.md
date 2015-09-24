@@ -4,6 +4,6 @@
 
 Some cool canvas animations created just for fun and exercise of the canvas basics.
 
-Take a look [here](http://gorchev.pro/ctx-showcase) 
+Temporary taken down for improvements
 
 - More examples to come...
