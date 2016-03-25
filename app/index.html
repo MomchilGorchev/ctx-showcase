@@ -57,46 +57,13 @@
 
                     This example is using TweenMax's <em>SlowMo</em> easing (more info <a class="inline" href="https://greensock.com/ease-visualizer" >here</a>) and the commonly used function to generate random array indexes:
                 </p>
-                <pre class="code">
-                    function randomNumber(min, max) {
-                        return Math.random() * (max - min) + min;
-                    }
-                </pre>
                 <p>
                     The the duration of the animation of each object is based on the it's <em>radius</em> value. Smaller circles gets faster animation. Every shape/circle (however you want to call it :)) is initially being draw on a random canvas position.
                     Then the <em>x</em> and <em>y</em> are being changed to another random value and the object is moved to its new position.
                 </p>
-                <pre class="code">
-                    function moveAround(dot){
-
-                        var pos = {
-                            x: dot.x,
-                            y: dot.y
-                        };
-                        var newPos = {
-                            x: Math.random() * canvas.width ,
-                            y: Math.random() * canvas.height
-                        };
-
-                        var timing = dot.radius < 5 ? 10 : 30;
-
-                        TweenMax.to(dot, timing, {
-                            x: newPos.x,
-                            y: newPos.y,
-                            ease: SlowMo.ease.config(0.3, 0.4, false),
-                            onComplete: function() {
-                                TweenMax.to(dot, timing, {
-                                    x: pos.x,
-                                    y: pos.y,
-                                    ease: SlowMo.ease.config(0.3, 0.4, false),
-                                    onComplete: function() {
-                                        moveAround(dot);
-                                    }
-                                })
-                            }
-                        });
-                    }
-                </pre>
+                <p><a href="http://jsbin.com/bajaqu/edit?js,output">Edit on JSBin</a></p>
+                <a class="jsbin-embed" href="http://jsbin.com/bajaqu/embed?js">JS Bin on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.35.11"></script>
+                
 
             </section>
         </main>

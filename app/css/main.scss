@@ -12,21 +12,20 @@
 
 @import "components/fonts";
 
-
-// Styling example - why not?
+iframe{
+  height: 500px;
+}
 body {
   background: $bg-color;
   color: $font-color;
   font-family: $body-font;
 }
 
-// Magnificent dog image styling
 img {
   max-width: 650px;
   width: 100%;
 }
 
-// Awesome navigation bar
 nav {
   height: 60px;
   line-height: 60px;
