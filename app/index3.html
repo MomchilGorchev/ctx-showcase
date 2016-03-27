@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
     <link href='http://fonts.googleapis.com/css?family=Abel|Ubuntu' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="css/main.css"/>
     <!-- /Stylesheets -->
@@ -49,47 +49,29 @@
     <main>
         <canvas id="scene"></canvas>
 
-        <section class="info">
-            <blockquote><p><a href="https://github.com/MomchilGorchev/canvas-fun" class="inline"><i class="fa fa-download"></i> Download source</a></blockquote>
-            <blockquote><p>Highlights</blockquote>
-            <p>
-                The source code for this example can be found on GitHub.<br />
+        <section class="info row">
+            <div class="col s12 m12 l6">
+                <blockquote>
+                    <p>
+                        <a href="https://github.com/MomchilGorchev/canvas-fun" class="inline">
+                            <i class="fa fa-download"></i> Download source
+                        </a>
+                    </p>
+                </blockquote>
+                <blockquote>
+                    <p><a href="http://jsbin.com/kukige/edit?js" target="_blank"  class="inline"><i class="fa fa-edit"></i> Live edit on JSBin</a></p>
+                </blockquote>
+                <blockquote><p><i class="fa fa-list-alt"></i> Highlights</blockquote>
+                <p>
+                    The source code for this example can be found on GitHub.<br />
 
-                This is quite straightforward particle animation. The most interesting part is the TweenMax animation function which dynamically check for the new generated position of each particle and change the alpha value.
+                    This is quite straightforward particle animation. The most interesting part is the TweenMax animation function which dynamically check for the new generated position of each particle and change the alpha value.
 
-            </p>
-            <pre class="code">
-                function animateDot(d){
-
-                    if(d.y <= 0){
-                        d.alpha = Math.random();
-                    }
-                    if(d.x <= 0){
-                        d.alpha = Math.random();
-                    }
-                    var newDy = HEIGHT;
-                    var newXy = Math.random() * WIDTH;
-                    var delay = Math.random() * 5;
-
-                    TweenMax.to(d, 2, {
-                        y: newDy,
-                        x: newXy,
-                        delay: delay,
-                        ease: Power0.easeNone,
-                        onComplete: function(){
-                            if(d.y >= HEIGHT){
-                                d.alpha = 0;
-                                d.y = -10;
-                            }
-                            if(d.x >= WIDTH){
-                                d.alpha = 0;
-                                d.x = -10;
-                            }
-                            animateDot(d);
-                        }
-                    });
-                }
-            </pre>
+                </p>
+            </div>
+            <div class="col s12 m12 l6">
+                <a class="jsbin-embed" href="http://jsbin.com/kukige/embed?js">JS Bin on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.35.11"></script>
+            </div>
         </section>
     </main>
 </div>
