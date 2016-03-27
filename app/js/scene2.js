@@ -2,8 +2,6 @@
  * Created by momchillgorchev on 12/06/15.
  */
 
-document.addEventListener('DOMContentLoaded', function(){
-
 
     'use strict';
 
@@ -142,6 +140,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
         // init everything
         constructor.init();
+        return constructor;
     }
 
     // Start everything :)
@@ -166,4 +165,3 @@ document.addEventListener('DOMContentLoaded', function(){
     //ctx.closePath();
     //ctx.fillStyle = grd;
     //ctx.fill();//And you can use this method as
-});
